@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    /* z-index: -1; */
+}
+
+.background,
+.foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.background {
+    transform: translateZ(-40px) scale(5);
+}
+
+.foreground {
+    transform: translateZ(-20px) scale(3);
+}
+
+h1 {
+    position: absolute;
+    top: 5rem;
+    letter-spacing: 5px;
+    font-size: 10rem;
+    color: white;
+    text-shadow: 2px 0px 1px black;
+}
+
+section {
+    background-color: rgb(45, 45, 49);
+    color: white;
+    padding: 5rem 0px;
+    position: absolute;
+}
+
+#secheading {
+    font-size: 4rem;
+    padding: 0px 10rem;
+}
+
+.text{
+    font-size: 30px;
+    padding: 3rem 9rem;
+    margin:5px;
+}
+
+.desc{
+    position: absolute;
+    top:50%;
+    left:45%;
+    font-size: 2.5rem;
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    font-weight: 600px;
+    transform: translateX(-50px) translateY(-50px);
+}
+
+.bg {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bg1 {
+    background-image: url(sport-1.jpg);
+}
+
+.bg2 {
+    background-image: url(sport-2.jpg);
+}
+
+.bg3 {
+    background-image: url(sport-3.jpg);
+}
