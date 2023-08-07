@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100wh;
+    height: 100vh;
+    background-color: beige;
+    border: 5px solid black;
+}
+
+.box {
+    width: 350px;
+    height: 80px;
+    background-color: blue;
+    border-radius: 10px;
+    position: relative;
+    /* animation-name: dhillon;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    /* animation-direction:alternate-reverse; */
+    /* animation-fill-mode:both; */
+    /* animation-delay: 2s; */
+    /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+    animation: dhillon 5s linear 2s infinite reverse none;
+}
+
+/* @keyframes dhillon {
+    from {
+        top: 0px;
+        left: 0px;
+    }
+
+    to {
+        top: 0px;
+        left: 1150px;
+    }
+} */
+
+@keyframes dhillon {
+    0%{
+        top:0;
+        left: 0;
+    }
+
+    30%{
+        top:5%;
+        left:90%;
+    }
+
+    60%{
+        top:70%;
+        left:10%;
+    }
+    100%{
+        top:75%;
+        left:90%;
+    }
+}
+

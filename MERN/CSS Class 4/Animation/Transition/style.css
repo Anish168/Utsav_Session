@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conatiner {
+    border: 2px solid orange;
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+    background-color: aqua;
+}
