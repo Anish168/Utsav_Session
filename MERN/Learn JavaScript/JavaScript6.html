@@ -1,0 +1,61 @@
+<!-- DOM Represent the logical structure of the page. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1>This is a heading.</h1>
+    <p>Small Paragraph.</p>
+    <h1 id="one">Heading 1</h1>
+    <h1 id="two">Second Heading</h1>
+    <p class="para">Small Paragraph</p>
+
+    var heading=document.getElementById("one")
+    undefined
+    heading.style.color='red'
+
+    var headings=document.getElementsByTagName('h2')
+    undefined
+    headings[0].innerText="hello";
+    'hello'
+    headings[1].innerText="hello";
+    'hello'
+
+    var paragraph=document.getElementsByClassName('para')
+    undefined
+    paragraph[0].style.fontFamily="arial"
+
+    var heading3=document.querySelector('#one');
+    heading3.innerText="hey";
+    
+    var heading4=document.querySelector('.para');
+   
+    
+
+    <!-- Event Handling -->
+    <button id="btn">Say Hello!</button>
+    <!-- <button id="btn" onclick="alert('Hello')">Say Hello!</button> -->
+    <!-- 
+    var helloButton=document.getElementById("btn");
+    helloButton.addEvenListener('click',function(){
+        alert('Hello');
+    }); -->
+    <!-- var helloButton=document.getElementById("btn");
+    undefined
+    helloButton
+    <button id=​"btn">​Say Hello!​</button>​
+    helloButton.addEventListener('click',function()
+    {
+    alert("hello");
+    }); -->
+
+
+</body>
+
+</html>

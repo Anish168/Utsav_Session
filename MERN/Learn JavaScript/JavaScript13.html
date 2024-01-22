@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let Variable, Arrow Function</title>
+
+</head>
+
+<body>
+
+    <script>
+        // let abc = "Hello world";
+        // console.log(abc);
+        // var bac = "Hello world";
+        // console.log(bac);
+
+        //General function
+        function multiply(x, y) {
+            let p = x * y;
+            return p;
+        }
+
+        //Anonymous function
+        let multiply = function (x, y) {
+            let p = x * y;
+            return p;
+        }
+
+        //Arror Function
+        let multiply = (x, y) => {
+            let p = x * y;
+            return p;
+        }
+        //we can decrease the length of this function
+        // 1.)It can have alphanumeric Character or hypen or underscore
+        // let multiply = (x, y) => x * y;
+
+        // 2.) Function has only one argument
+        // let multiply = x => x * x;
+
+    </script>
+</body>
+
+</html>

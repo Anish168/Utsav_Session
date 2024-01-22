@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions and Arrays of Javascript</title>
+    <script>
+        // function showAlert() {
+        //     alert("Hey");
+        // }
+
+        function add(a, b) {
+            // console.log(a + b);
+            return a+b;
+        }
+        var result=add(11,1);   //12
+        console.log(result);
+        // add(4, 6);  //10
+        var result=add(11);
+        console.log(result);    //11 undefined --> NAN
+
+        var result=add(11,2,3);
+        console.log(result);    //13    extra argument ignored
+
+        //hoisting
+        function hoistDemo() {
+            console.log(i);
+        }
+        hoistDemo();    //error
+
+        function hoistDemo()    //function hoisting
+        {
+            console.log(i);
+            var i = 10;           //it means var i;
+            // console.log(i);
+            // i=10;
+        }
+        hoistDemo();    //undefined cuz it is able to find out i
+
+        // console.log(j);
+        // var j=10;   //variable hoisting
+
+        var name="scope";
+        console.log(name);
+
+        function scopeDemo()
+        {
+            var i=10;
+            console.log(i);
+        }
+        scopeDemo();
+        console.log(i); //can't access
+
+        function c()
+        {
+            console.log("Inside c");
+        }
+        function b()
+        {
+            console.log("Inside b");
+        }
+        function a()
+        {
+            console.log("Inside a");
+        }
+        a();
+        console.log("Global Context");
+
+        // function within function
+        function outer() {
+            var outerVar = 10;
+            function inner() {
+                console.log(outerVar);
+            }
+            inner();
+        }
+        outer();
+
+        function outer() {
+            var outerVar = 10;
+            function inner() {
+                var innerVar = 100;
+                console.log(outerVar);
+            }
+            inner();
+            console.log(innerVar);  //throws an error
+        }
+        outer();
+
+        var name = "global";
+        function outer() {
+            var outerVar = 10;
+            var name = outer;
+            function inner() {
+                var innerVar = 100;
+                var name = inner;
+                console.log(name);
+            }
+            inner();
+            console.log(name);
+        }
+        outer();
+        console.log(name);
+
+        // function expression
+        var factorial = function fact(n) {
+            var ans = 1;
+            for (var i = 1; i <= n; i++) {
+                ans = ans * i;
+            }
+            return ans;
+        }
+        console.log(factorial);
+        console.log(factorial(5));
+        console.log(fact(5));   //error
+        
+        var factorial2 = function(n) {
+            var ans = 1;
+            for (var i = 1; i <= n; i++) {
+                ans = ans * i;
+            }
+            return ans;
+        }
+        console.log(factorial2);
+        console.log(factorial2(5));
+
+
+    </script>
+</head>
+
+<body>
+    <h1>This is Javascript.</h1>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays of Javascript</title>
+    <script>
+        var arr = [1, 2, 3, 4];
+        var arr = new Array(1, 2, 3, 4);
+        console.log(arr);
+        console.log(arr[3]);
+        console.log(arr[6]);
+        arr[2] = 90;
+        arr[6] = 80;
+        console.log(arr);
+        arr.length;
+
+        var arr3 = new Array();    //create empty array for me
+        var arr2 = new Array(2);    //create empty array for me where 2 denotes size of array
+        console.log(arr2);
+
+        //Function on arrays
+        var arr4 = ["abc", 20, true];
+        var arr5 = new Array(1000);
+        arr4.push(10);
+        arr4.pop();
+        arr4.shift();     //shifting array towards left shows shifted element
+        arr4.unshift(2);    //towards right shift element
+        console.log(arr.shift());
+        console.log(arr.shift());
+        console.log(arr);
+        console.log(arr.unshift(20));
+        console.log(arr);
+        var arr6 = [2, 4, 5, 7, 56, 78];
+        console.log(arr6.splice(2, 1));    //splice(start index, deletion count, element to be inserted)
+        console.log(arr6.splice(3, 1));
+        console.log(arr6.splice(1)); //delete all element starting from 1 index
+        console.log(arr6.splice(2, 0, 90));
+        console.log(arr);
+        console.log(arr6.splice(2, 2, 90, 10, 34));
+        console.log(arr);
+
+        //Iterating Over arrays
+        var arr7 = [3, 4, 5, 6];
+        for (var i = 0; i <= arr.length; i++) {
+            console.log(arr[i]);
+        }
+
+        function print(element) {
+            console.log(element);
+        }
+
+        arr7.forEach(print);
+
+        // --------------------------------------------------------
+        //Creating object using object intializer
+        let dog = {
+            breed: "Golden Reteriver",
+            height: "23",
+            color: "black",
+            display: function(){
+                console.log(this.breed + this.color);
+            }
+        };
+
+        //Creating object using new object
+        let dogs = new Object();
+        dogs.breed= "Golden Reterive";
+        dogs.height= "23";
+        display= function() {
+            console.log(this.breed + this.height);
+        }
+
+        //Creating object using function constructor
+        //It is a normal function used to create an Object
+        let car1 = new Object();
+        car1.make = 'Hyundai';
+        car1.model = 'i20';
+        car1.year = 2014;
+        car1.display = function () {
+            console.log(this.make + this.model + this.year);
+        };
+
+        let car2 = new Object();
+        car2.make = 'Hyundai';
+        car2.model = 'i20';
+        car2.year = 2014;
+        car2.display = function () {
+            console.log(this.make + this.model + this.year);
+        };
+
+        let car3 = new Object();
+        car3.make = 'Hyundai';
+        car3.model = 'i20';
+        car3.year = 2014;
+        car3.display = function () {
+            console.log(this.make + this.model + this.year);
+        };
+
+        //constructor
+        function Car(make, model, year) {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+            this.display = function () {
+                console.log(this.make + this.model + this.year);
+            }
+        }
+
+        let car1 = new car("Hyundai", "i20", 2014);
+
+        //creating object using classes
+        // why do we need classes to create an object if the syntax is similar to that of a function constructor?
+        // --> It offers a convenient syntax.
+        // --> It allows to declare function outside the conatructor.
+
+        class car {
+            constructor(make, model, year) {
+                this.make = make;
+                this.model = model;
+                this.year = year;
+                this.display = function () {
+                    console.log(this.make + this.model + this.year);
+                }
+            };
+        }
+
+        let car1 = new car("Hyundai", "i20", 2014);
+
+        // for-in loop is exclusively used for objects in Javascript.It iterates all the
+        // properties in an object.
+
+        for (var i in car1) {
+            console.log(car1.prop);
+            // console.log(car1[prop]);
+        }
+
+        // ----------------------------------
+
+
+    </script>
+</head>
+
+<body>
+    <h1>This is Javascript.</h1>
+</body>
+
+</html>

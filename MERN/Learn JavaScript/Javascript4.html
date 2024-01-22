@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in Javascript</title>
+    <script>
+        var student = {};   //object helps in wrapping up data and functionality together
+        var obj = new Object();
+        console.log(typeof (student));
+        var student = { name: "Anish", rollNo: 168, marks: 90 };
+        console.log(student);
+        console.log(student.name);
+        student.marks = 100;
+        student.sem;    //undefined
+        student.sem = 40;
+
+        //Square bracket notation
+        var student = { "- name": "Hey", rollNo: 169, marks: 100 };
+        student["marks"];
+        // student.-name;  //throws an error
+        student["-name"];
+
+        function printProperty(obj, prop) {
+            console.log(obj[prop]);
+        }
+        printProperty(student, "marks");
+
+        //Deleting property
+        delete student.marks;
+        delete student["marks"];
+
+        //How objects are stored?
+        var obj = {
+            "p1": 100
+        };
+        var obj2 = obj;
+        console.log(obj);
+        console.log(obj2);
+        obj2.p1 = "100";
+        console.log(obj);
+        console.log(obj2);
+        var item1 = { name: "banana" };
+        var item2 = { name: "banana" };
+        console.log(item1 === item2);
+        item1 = item2;
+        console.log(item1 == item2);
+
+        //Iterating over object
+        for (var prop in student) {
+            console.log(student);
+            console.log(student, student[prop]);
+        }
+
+        var keys = Object.keys(student);
+        var keys = Object.getOwnPropertyNames(student);
+        console.log(keys);
+
+
+        //Nested Object
+        var student = {
+            name: "Anish", rollNo: 168, marks: 90, address: {
+                city: "New Delhi",
+                pincode: 110018
+            }
+        };
+        console.log(student);
+        console.log(student.address);
+        console.log(student.address["city"]);
+
+    </script>
+</head>
+
+<body>
+    <h1>This is Javascript.</h1>
+</body>
+
+</html>
