@@ -1,0 +1,15 @@
+h1{
+    padding: 46px 30px;
+    text-align: center;
+}
+.container{
+    text-align: center;
+    padding: 40px;
+    background-color: deeppink;
+}
+.temp{
+    display: inline-block;
+    font-size: 35px;
+    padding: 10px 20px;
+    margin: 10px;
+}

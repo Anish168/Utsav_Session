@@ -1,0 +1,22 @@
+body{
+    padding: 80px 200px;
+}
+h1{
+    text-align: center;
+    background-color: pink;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+    margin: 0px;
+    padding: 10px;
+}
+textarea
+{
+    width: 99.4%;
+    padding-bottom: 200px;
+}
+p{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}

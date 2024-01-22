@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Temperature</h1>
+    <div class="container">
+        <div class="temp">
+            <label>celsius</label>
+            <input type="number" value="0" id="celcius">
+        </div>
+
+        <div class="temp">
+            <label>fahrenheit </label>
+            <input type="number" value="32" id="fahren">
+
+        </div>
+    </div>
+
+    <script>
+        var cel = document.getElementById("celcius");
+        var fah = document.getElementById("fahren");
+
+        cel.addEventListener('input', function () {
+            var c = this.value;
+            var f = (c * 9 / 5) + 32;
+            if (!Number.isInteger(f)) {
+                f = f.toFixed(3);   //45.334445 ==> 45.334
+            }
+            fah.value = f;
+        });
+        
+        fah.addEventListener('input', function () {
+            // console.log("taking input");
+            var f = this.value;
+            var c = (f - 32) * 5 / 9;
+            if (!Number.isInteger(c)) {
+                c = c.toFixed(3);
+            }
+            cel.value = c;
+        });
+    </script>
+
+
+
+</body>
+
+</html>
