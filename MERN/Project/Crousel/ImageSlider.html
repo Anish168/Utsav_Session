@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="projectStyle.css">
+</head>
+<body>
+    <div class="slide-container">
+        <div class="slide">
+            <img src="img1.jpg" alt="slide1">
+            <div class="caption">Captain Text 1 </div>
+        </div>
+
+        <div class="slide">
+            <img src="img2.jpg" alt="slide2">
+            <div class="caption">Captain Text 2 </div>
+        </div>
+
+        <div class="slide">
+            <img src="img3.jpg" alt="slide2">
+            <div class="caption">Captain Text 3 </div>
+        </div>
+
+        <span class="arrow next" onclick="controller(1)">&#10095</span>
+        <span class="arrow prev" onclick="controller(-1)">&#10094</span>
+    </div>
+    
+    <script src="projectScript.js">
+
+    </script>
+</body>
+</html>
