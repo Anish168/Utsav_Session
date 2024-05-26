@@ -2,6 +2,6 @@ package myutil
 
 import "fmt"
 
-func PrintMessage() {
-	fmt.Println("Good Morning")
+func PrintMessage(message string) {
+	fmt.Println("Hello" + message)
 }

@@ -1,3 +1,3 @@
-module learningGo
+module program
 
 go 1.22.2

@@ -2,10 +2,15 @@ package main
 
 import (
 	"fmt"
-	"learningGo/myutil"
+	"program/myutil"
 )
 
+//	func main() {
+//		fmt.Println("Hello World")
+//		fmt.Println("Hello cutie bro")
+//	}
 func main() {
-	fmt.Println("Hello world")
-	myutil.PrintMessage()
+	fmt.Println("Hello World")
+	fmt.Println("Hello cutie bro")
+	myutil.PrintMessage("Anish")
 }

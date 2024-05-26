@@ -3,26 +3,20 @@ package main
 import "fmt"
 
 func greeting() {
-	fmt.Println("Good evening..!!")
+	fmt.Println("Good Morning")
 }
 
-func working(name string) {
-	fmt.Println("Sleeping", name)
-}
-
-func sum(a, b int) int {
-	return a + b
-}
-
-func multiply(a, b int) int {
-	result := a * b
-	return result
+// func add(a, b int) int {
+// 	return a + b
+// }
+func add(a, b int) (result int) {
+	result = a + b
+	return
 }
 
 func main() {
-	fmt.Println("Started")
+	fmt.Println("started")
 	greeting()
-	working("Utsav")
-	fmt.Println(sum(2, 3))
-	fmt.Println(multiply(2, 3))
+	ans := add(2, 3)
+	fmt.Println(ans)
 }
