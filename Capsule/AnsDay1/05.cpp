@@ -1,0 +1,47 @@
+class Solution
+{
+public:
+    void moveZeroes(vector<int> &nums)
+    {
+        //         vector<int>nonZero;
+        //         for(int i = 0; i < nums.size(); i++)
+        //         {
+        //             if(nums[i] != 0)
+        //             {
+        //                 nonZero.push_back(nums[i]);
+        //             }
+        //         }
+        //         for(int i = 0; i < nonZero.size(); i++)
+        //         {
+        //             nums[i] = nonZero[i];
+        //         }
+
+        //         for(int i = nonZero.size(); i < nums.size(); i++)
+        //         {
+        //             nums[i] = 0;
+        //         }
+
+        // using two pointer
+        int j = -1;
+        for (int i = 0; i < nums.size(); i++)
+        {
+            if (nums[i] == 0)
+            {
+                j = i;
+                break;
+            }
+        }
+
+        if (j != -1)
+        {
+            for (int i = j + 1; i < nums.size(); i++)
+            {
+                if (nums[i] != 0)
+                {
+                    swap(nums[i], nums[j]);
+                    j++;
+                }
+            }
+        }
+    }
+};
